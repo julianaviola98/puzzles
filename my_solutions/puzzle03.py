@@ -266,7 +266,7 @@ def choosePairSuit(pairsuits, cardsuits, cnumbers):
         return suit2
     
 def getMinDistanceForSuit(numbersInSuit):
-    # The distance should never exceed 7 so it's a safe initial value
+    # The distance should never exceed 6, so 7 is a safe initial value
     minDistanceForSuit = 7
     for pair in combinations(numbersInSuit, 2):
         distance = (pair[0] - pair[1]) % 13
