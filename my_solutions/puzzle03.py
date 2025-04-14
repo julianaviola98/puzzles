@@ -83,7 +83,7 @@ def outputFirstCard(numbers, oneTwo, cards):
         encode = (numbers[oneTwo[1]] - numbers[oneTwo[0]]) % 13
 
 ##    #The following print statement is just for debugging!
-##    print ('Hidden card is:', cards[hidden], 'and need to encode', encode)
+    print ('Hidden card is:', cards[hidden], 'and need to encode', encode)
     print ('First card is:', cards[other])
 
     return hidden, other, encode
@@ -138,6 +138,7 @@ def outputNext3Cards(code, ind):
     print ('Second card is:', deck[second])
     print ('Third card is:', deck[third])
     print ('Fourth card is:', deck[fourth])
+    return([deck[second], deck[third], deck[fourth]])
 
     
 #Sorts elements in tlist in ascending order.
@@ -194,14 +195,13 @@ def MagicianGuessesCard():
 
 #This procedure is similar to AssistantOrdersCards() except it
 #takes in a large number and "randomly" generates five cards.
-def ComputerAssistant():
+def ComputerAssistant(number=None, guess=None):
 
     print ('Cards are character strings as shown below.')
     print ('Ordering is:', deck)
     cards, cind, cardsuits, cnumbers, pairsuits = [], [], [], [], []
     numsuits = [0, 0, 0, 0]
-    number = 0
-    while number < 99999:
+    while not number:
         number = int(input('Please give random number' +
                                ' of at least 6 digits:'))
     
@@ -239,13 +239,14 @@ def ComputerAssistant():
     sortList(remindices)
     outputNext3Cards(encode, remindices)
 
-    guess = input('What is the hidden card?')
+    while not guess:
+        guess = input('What is the hidden card?')
     if guess == cards[hidden]:
         print ('You are a Mind Reader Extraordinaire!')
+        return True
     else:
         print ('Sorry, not impressed!')
-
-    return
+        return False
 
 # Exercise 2
 def choosePairSuit(pairsuits, cardsuits, cnumbers):
