@@ -5,17 +5,6 @@
 #celebrities are still there.
 #Clever algorithm that will work with fractional times
 
-sched = [(6, 8), (6, 12), (6, 7), (7, 8), (7, 10), (8, 9), (8, 10), (9, 12),
-            (9, 10), (10, 11), (10, 12), (11, 12)]
-sched2 = [(6.0, 8.0), (6.5, 12.0), (6.5, 7.0), (7.0, 8.0), (7.5, 10.0), (8.0, 9.0),
-          (8.0, 10.0), (9.0, 12.0), (9.5, 10.0), (10.0, 11.0), (10.0, 12.0), (11.0, 12.0)]
-sched3 = [(6, 7), (7,9), (10, 11), (10, 12), (8, 10), (9, 11), (6, 8),
-          (9, 10), (11, 12), (11, 13), (11, 14)]
-sched4 = [(6.0, 8.0, 2), (6.5, 12.0, 1), (6.5, 7.0, 2),
-          (7.0, 8.0, 2), (7.5, 10.0, 3), (8.0, 9.0, 2),
-          (8.0, 10.0, 1), (9.0, 12.0, 2), (9.5, 10.0, 4),
-          (10.0, 11.0, 2), (10.0, 12.0, 3), (11.0, 12.0, 7)]
-
 # Exercise 1: Add ystart and yend
 def bestTimeToPartySmart(schedule, ystart, yend):
     #Convert schedule to list of start times and end times marked as such
@@ -35,6 +24,7 @@ def bestTimeToPartySmart(schedule, ystart, yend):
     #Output best time to party
     print ('Best time to attend the party is at', time,\
            'o\'clock', ':', maxcount, 'celebrities will be attending!')
+    return time
     
 
 #Sort the elements of tlist in ascending order
@@ -109,6 +99,7 @@ def alternativeBestTimeToPartySmart(schedule):
             bestTime = startTime
     print ('Best time to attend the party is at', bestTime,\
            'o\'clock', ':', maxCount, 'celebrities will be attending!')
+    return bestTime
     
 def weightedBestTimeToPartySmart(schedule):
     times = []
@@ -122,12 +113,4 @@ def weightedBestTimeToPartySmart(schedule):
 
     print ('Best time to attend the party is at', time,\
            'o\'clock', ':', maxCount, 'celebrities will be attending!')
-
-
-bestTimeToPartySmart(sched, 6, 12)
-bestTimeToPartySmart(sched2, 6, 12)
-bestTimeToPartySmart(sched3, 6, 14)
-alternativeBestTimeToPartySmart(sched)
-alternativeBestTimeToPartySmart(sched2)
-alternativeBestTimeToPartySmart(sched3)
-weightedBestTimeToPartySmart(sched4)
+    return time
