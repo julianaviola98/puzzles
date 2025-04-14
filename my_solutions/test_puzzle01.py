@@ -23,6 +23,3 @@ class TestPuzzle01(unittest.TestCase):
         self.assertEqual(pleaseConformOnepass(caps1), [[2, 4], [6, 8], [11, 11]])
         self.assertEqual(pleaseConformOnepass(caps2), [[2, 4], [6, 8]])
         # pleaseConformOnepass doesn't handle hatless people (caps3)
-
-if __name__ == '__main__':
-    unittest.main()
