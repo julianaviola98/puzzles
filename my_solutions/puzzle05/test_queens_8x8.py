@@ -1,7 +1,7 @@
 import unittest
-from puzzle05_8queens import *
+from queens_8x8 import *
 
-class TestPuzzle05_8Queens(unittest.TestCase):
+class TestQueens_8x8(unittest.TestCase):
     def test_EightQueens(self):
         self.assertEqual(EightQueens(1, [-1] * 8), [[0, 4, 7, 5, 2, 6, 1, 3]])
         self.assertEqual(EightQueens(2, [-1] * 8), [[0, 4, 7, 5, 2, 6, 1, 3],

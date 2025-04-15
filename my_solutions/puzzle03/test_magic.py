@@ -1,9 +1,7 @@
-import sys
 import unittest
-from io import StringIO
-from puzzle03 import *
+from magic import *
 
-class TestPuzzle03(unittest.TestCase):
+class TestMagic(unittest.TestCase):
     def test_ComputerAssistant(self):
         self.assertTrue(ComputerAssistant(100000, '6_H'))
         self.assertTrue(ComputerAssistant(200000, '5_C'))
@@ -37,9 +35,9 @@ class TestPuzzle03(unittest.TestCase):
         self.assertEqual(outputNext3Cards(5, [0, 1, 2]), ['3_C', 'A_C', '2_C'])
         self.assertEqual(outputNext3Cards(6, [0, 1, 2]), ['3_C', '2_C', 'A_C'])
         # Same value but different suits
-        self.assertEqual(outputNext3Cards(1, [0, 1, 2]), ['A_C', 'A_D', 'A_H'])
-        self.assertEqual(outputNext3Cards(2, [0, 1, 2]), ['A_C', 'A_H', 'A_D'])
-        self.assertEqual(outputNext3Cards(3, [0, 1, 2]), ['A_D', 'A_C', 'A_H'])
-        self.assertEqual(outputNext3Cards(4, [0, 1, 2]), ['A_D', 'A_H', 'A_C'])
-        self.assertEqual(outputNext3Cards(5, [0, 1, 2]), ['A_H', 'A_C', 'A_D'])
-        self.assertEqual(outputNext3Cards(6, [0, 1, 2]), ['A_H', 'A_D', 'A_C'])
+        self.assertEqual(outputNext3Cards(1, [0, 13, 26]), ['A_C', 'A_D', 'A_H'])
+        self.assertEqual(outputNext3Cards(2, [0, 13, 26]), ['A_C', 'A_H', 'A_D'])
+        self.assertEqual(outputNext3Cards(3, [0, 13, 26]), ['A_D', 'A_C', 'A_H'])
+        self.assertEqual(outputNext3Cards(4, [0, 13, 26]), ['A_D', 'A_H', 'A_C'])
+        self.assertEqual(outputNext3Cards(5, [0, 13, 26]), ['A_H', 'A_C', 'A_D'])
+        self.assertEqual(outputNext3Cards(6, [0, 13, 26]), ['A_H', 'A_D', 'A_C'])

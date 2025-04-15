@@ -99,7 +99,7 @@ def outputNext3Cards(code, ind):
     small, medium, large = None, None, None
     if value1 > value2 and value1 > value3:
         large = ind[0]
-        if value2 < value3:
+        if value2 <= value3:
             small = ind[1]
             medium = ind[2]
         else:
@@ -107,7 +107,7 @@ def outputNext3Cards(code, ind):
             medium = ind[1]
     elif value2 > value1 and value2 > value3:
         large = ind[1]
-        if value1 < value3:
+        if value1 <= value3:
             small = ind[0]
             medium = ind[2]
         else:
@@ -115,7 +115,7 @@ def outputNext3Cards(code, ind):
             medium = ind[0]
     else:
         large = ind[2]
-        if value1 < value2:
+        if value1 <= value2:
             small = ind[0]
             medium = ind[1]
         else:

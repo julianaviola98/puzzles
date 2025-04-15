@@ -1,7 +1,7 @@
 import unittest
-from puzzle04 import *
+from balls import *
 
-class TestPuzzle04(unittest.TestCase):
+class TestBalls(unittest.TestCase):
     def test_determineRadixAndNumBalls(self):
         self.assertEqual(determineRadixAndNumBalls(128, 6), (3, 5))
 

@@ -1,11 +1,11 @@
 import unittest
-from puzzle01 import *
+from conform_opt import *
 
 caps1 = ['F', 'F', 'B', 'B', 'B', 'F', 'B', 'B', 'B', 'F', 'F', 'B', 'F' ]
 caps2 = ['F', 'F', 'B', 'B', 'B', 'F', 'B', 'B', 'B', 'F', 'F', 'F', 'F' ]
 caps3 = ['F', 'F', 'B', 'H', 'B', 'F', 'B', 'B', 'B', 'F', 'H', 'F', 'F']
 
-class TestPuzzle01(unittest.TestCase):
+class TestConformOpt(unittest.TestCase):
     def test_pleaseConformOpt(self):
         self.assertEqual(pleaseConformOpt([]), [])
         self.assertEqual(pleaseConformOpt(['F']), [])
