@@ -24,6 +24,7 @@ def EightQueens(numSolutions, location, n=8):
     solutions = []
     for i in range(n):
         board[0] = i
+        # Exercise 2
         if location[0] >= 0 and i != location[0]:
             continue
         for j in range(n):

@@ -57,6 +57,7 @@ def FourQueens(n=4):
         board[i][0] = 1
         for j in range(n):
             board[j][1] = 1
+            # Exercise 3
             if not noConflicts(board, 1, j, n):
                 board[j][1] = 0
                 continue
