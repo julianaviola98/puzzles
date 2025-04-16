@@ -1,3 +1,4 @@
+# Exercise 3
 def isPalindrome(word):
     if not word:
         return True

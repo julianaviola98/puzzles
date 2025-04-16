@@ -50,6 +50,7 @@ def rQueens(board, current, size, location):
     else:
         for i in range(size):
             board[current] = i
+            # Exercise 2
             if location[current] != -1 and location[current] != i:
                 continue
             if (noConflicts(board, current)):
